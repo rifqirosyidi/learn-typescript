@@ -100,3 +100,39 @@ console.log(any_arr);
 var obj_any;
 obj_any = { name: 'My', age: 12 };
 console.log(obj_any);
+// ===== FUNCTION =====
+var sayHi = function () {
+    console.log("Hi There");
+};
+sayHi();
+// define initial var as a function
+var sayHello;
+sayHello = function () {
+    console.log("Works");
+};
+var addition = function (a, b) {
+    console.log(a + b);
+};
+addition(13, 89);
+// optional parameters
+var minus = function (a, b, c) {
+    if (c === void 0) { c = 'DEFAULT VALUE'; }
+    console.log(a - b);
+    console.log(c);
+};
+minus(4, 5);
+minus(4, 3, 'Min Opr');
+// sayHi = 'New Say Hi'
+var multiply = function (a, b) {
+    return a * b;
+};
+// assign the type of return value
+var result = multiply(10, 23);
+console.log(result);
+// More Specific
+// (a: ..., b: ...) : ...
+var multiplyWithDefineReturnVal = function (a, b) {
+    return a * b;
+};
+var number_result = multiplyWithDefineReturnVal(3, 7);
+console.log(number_result);

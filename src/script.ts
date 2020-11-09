@@ -138,3 +138,50 @@ console.log(any_arr)
 let obj_any: { name: any, age: any }
 obj_any =  { name: 'My', age: 12 }
 console.log(obj_any)
+
+
+// ===== FUNCTION =====
+let sayHi = () => {
+    console.log("Hi There")
+}
+sayHi()
+
+// define initial var as a function
+let sayHello: Function
+sayHello = () => {
+    console.log("Works")
+}
+
+const addition = (a:number, b:number) => {
+    console.log(a + b)
+}
+
+addition(13, 89)
+
+// optional parameters
+const minus = (a:number, b:number, c?:number|string = 'DEFAULT VALUE') => {
+    console.log(a-b)
+    console.log(c)
+}
+
+minus(4,5)
+minus(4,3, 'Min Opr')
+
+// sayHi = 'New Say Hi'
+
+const multiply = (a: number, b:number) => {
+    return a * b
+}
+
+// assign the type of return value
+let result = multiply(10, 23)
+console.log(result)
+
+// More Specific
+// (a: ..., b: ...) : ...
+const multiplyWithDefineReturnVal = (a: number, b:number): number => {
+    return a * b
+}
+
+let number_result = multiplyWithDefineReturnVal(3, 7)
+console.log(number_result)
