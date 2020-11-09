@@ -17,7 +17,7 @@ var findCircleDiameter = function (d) {
     return d * Math.PI;
 };
 console.log(findCircleDiameter(2));
-// ARRAY
+// ===== ARRAY ======
 var words = ['it', 'do', 'be', 'like', 'this'];
 words.push('last');
 // cannot push different datatype
@@ -31,7 +31,7 @@ var mixed = [1, 'two', 3, 'four', 'five'];
 mixed.push(6);
 mixed.push('seven');
 mixed[0] = 'zero';
-// OBJECTS
+// ===== OBJECTS =====
 var country = {
     name: 'Indonesia',
     continent: 'Asia',
@@ -48,4 +48,35 @@ country.continent = 'America';
 //     president = ['Soekarnoe', 'Soehartoe']
 // }
 console.log(country);
-// 
+// ===== EXPLICIT TYPES =====
+var person;
+var age;
+var isLoggedIn;
+person = 'Tim',
+    age = 12;
+isLoggedIn = false;
+console.log(person, age, isLoggedIn);
+// ===== EXPLICIT ARR =====
+var persons = [];
+persons.push('One');
+console.log(persons);
+//  ===== UNION TYPES ======
+var mixed_arr = [];
+mixed_arr.push('One');
+mixed_arr.push(2);
+console.log(mixed_arr);
+var user_id;
+user_id = 123;
+user_id = '988';
+// ===== EXPLICIT OBJECTS =====
+var some_object;
+some_object = {
+    name: 'Named Object',
+    age: 23
+};
+// assign prop datatype
+var oth_object;
+oth_object = {
+    name: 'Oth',
+    age: 12
+};

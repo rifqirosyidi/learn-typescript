@@ -23,7 +23,7 @@ const findCircleDiameter = (d: number) => {
 
 console.log(findCircleDiameter(2))
 
-// ARRAY
+// ===== ARRAY ======
 let words = ['it', 'do', 'be', 'like', 'this']
 words.push('last')
 
@@ -42,7 +42,7 @@ mixed.push(6)
 mixed.push('seven')
 mixed[0] = 'zero'
 
-// OBJECTS
+// ===== OBJECTS =====
 let country = {
     name: 'Indonesia',
     continent: 'Asia',
@@ -64,4 +64,48 @@ country.continent = 'America'
 
 console.log(country)
 
-// 
+// ===== EXPLICIT TYPES =====
+let person: String
+let age: Number
+let isLoggedIn: Boolean
+
+person = 'Tim',
+age = 12
+isLoggedIn = false
+
+console.log(person, age, isLoggedIn)
+
+// ===== EXPLICIT ARR =====
+let persons: String[] = []
+persons.push('One')
+
+console.log(persons)
+
+//  ===== UNION TYPES ======
+let mixed_arr: (String|Number)[] = []
+mixed_arr.push('One')
+mixed_arr.push(2)
+
+console.log(mixed_arr)
+
+let user_id: String|Number
+user_id = 123
+user_id = '988'
+
+// ===== EXPLICIT OBJECTS =====
+let some_object: Object
+some_object = {
+    name: 'Named Object',
+    age: 23
+}
+
+// assign prop datatype
+let oth_object: {
+    name: String,
+    age: Number
+}
+
+oth_object = {
+    name: 'Oth',
+    age: 12
+}
