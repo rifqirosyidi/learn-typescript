@@ -96,3 +96,45 @@ form.addEventListener('submit', (e: Event) => {
 })
 
 
+
+// GENERICS 
+const addUID = (obj: object) => {
+    let uid = Math.floor(Math.random() * 100)
+    return {...obj, uid}
+}
+
+let userOne = addUID({name: 'Rief', age: 20})
+
+console.log(userOne)
+// console.log(userOne.name) NOT WORK
+
+// by default you cant access userOne.name, or uerOne.age because its not defined it just obj...
+// to handle this use generics below
+
+const genUID = <T extends object>(obj: T) => {
+    let uid = Math.floor(Math.random() * 100)
+    return {...obj, uid}
+}
+
+let userTwo = genUID({name: 'Rief', age: 20})
+
+console.log(userTwo.name)
+
+
+interface Resource<T> {
+    uid: number
+    res: string
+    data: T
+}
+
+const dataThree: Resource<object> = {
+    uid: 1,
+    res: 'person',
+    data: { name: 'Rief '}
+}
+
+const dataFour: Resource<string[]> = {
+    uid: 2,
+    res: 'cart',
+    data: ['laptop', 'smartphone']
+}

@@ -61,3 +61,29 @@ form.addEventListener('submit', (e) => {
     }
     list.render(doc, type.value, 'end');
 });
+// GENERICS 
+const addUID = (obj) => {
+    let uid = Math.floor(Math.random() * 100);
+    return Object.assign(Object.assign({}, obj), { uid });
+};
+let userOne = addUID({ name: 'Rief', age: 20 });
+console.log(userOne);
+// console.log(userOne.name) NOT WORK
+// by default you cant access userOne.name, or uerOne.age because its not defined it just obj...
+// to handle this use generics below
+const genUID = (obj) => {
+    let uid = Math.floor(Math.random() * 100);
+    return Object.assign(Object.assign({}, obj), { uid });
+};
+let userTwo = genUID({ name: 'Rief', age: 20 });
+console.log(userTwo.name);
+const dataThree = {
+    uid: 1,
+    res: 'person',
+    data: { name: 'Rief ' }
+};
+const dataFour = {
+    uid: 2,
+    res: 'cart',
+    data: ['laptop', 'smartphone']
+};
