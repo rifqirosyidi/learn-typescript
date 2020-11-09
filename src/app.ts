@@ -85,9 +85,12 @@ const list = new ListTemplate(ul)
 form.addEventListener('submit', (e: Event) => {
     e.preventDefault()
     let doc: HasFormatter
+
+    let values: [string, string, number]
+    values = [tofrom.value, details.value, amount.valueAsNumber]
     
     if (type.value === 'invoice'){
-        doc = new Invoice(tofrom.value, details.value, amount.valueAsNumber)
+        doc = new Invoice(...values)
     } else {
         doc = new Payment(tofrom.value, details.value, amount.valueAsNumber)
     }
@@ -167,3 +170,21 @@ const dataEight: SecondResource<object> = {
     res: SecondResourceType.MOVIE,
     data: {name: 'The LOTR'}
 }
+
+
+// TUPPLE
+
+let arr = [1, 'sec', true] // you can modify this arr by
+arr[0] = false
+arr[1] = 'twenty'
+
+// or even
+arr = [1, 2, 3, 4, 'five', true, false]
+
+// But Tupple You Cant Change Data Type in certain Position
+
+let tup: [string, boolean, number] = ['one', false, 3]
+// tup[1] = "Two" // This NOT allowed
+
+
+let student: [string, number] = ['ken', 123]
