@@ -9,6 +9,34 @@ const anchor = document.querySelector('a')!
 console.log(anchor.href)
 
 
+class Invoice {
+    client: string
+    details: string
+    amount: number
+
+    constructor(c: string, d: string, a:number) {
+        this.client = c
+        this.details = d
+        this.amount = a
+    } 
+
+
+    format() {
+        return `${this.client} owes $${this.amount} for ${this.details}`
+    }
+}
+
+const invOne = new Invoice('Rifqi', 'Work', 200)
+const invTwo = new Invoice('Some', 'Dev', 300)
+
+
+// Cool
+let listInvoice: Invoice[] = []
+listInvoice.push(invOne)
+listInvoice.push(invTwo)
+
+console.log(listInvoice)
+
 // FORM
 const form = document.querySelector('form') as HTMLFormElement
 // console.log(form.children)
@@ -28,3 +56,5 @@ form.addEventListener('submit', (e: Event) => {
         amount.valueAsNumber
     )
 })
+
+
