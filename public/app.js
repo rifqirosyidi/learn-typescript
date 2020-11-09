@@ -1,3 +1,18 @@
+const me = {
+    name: 'Jieg',
+    age: 30,
+    speak(text) {
+        console.log(text);
+    },
+    spend(amount) {
+        return amount;
+    }
+};
+console.log(me);
+const greetMe = (person) => {
+    console.log(`Hello ${person.name}`);
+};
+greetMe(me);
 import { Invoice } from './classes/Invoice.js';
 // Exclamation make sure that as a developer we know that tag is actually exist
 const anchor = document.querySelector('a');

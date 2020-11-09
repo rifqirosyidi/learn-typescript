@@ -1,3 +1,29 @@
+interface isPerson {
+    name: string
+    age: number
+    speak(a: string): void;
+    spend(a: number): number;
+}
+
+const me: isPerson = { 
+    name: 'Jieg', 
+    age: 30,
+    speak(text: string) {
+        console.log(text)
+    },
+    spend(amount: number): number {
+        return amount
+    }
+}
+
+console.log(me)
+
+const greetMe = (person: isPerson) => {
+    console.log(`Hello ${person.name}`)
+}
+
+greetMe(me)
+
 import { Invoice } from './classes/Invoice.js'
 
 // Exclamation make sure that as a developer we know that tag is actually exist
