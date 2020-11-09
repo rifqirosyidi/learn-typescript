@@ -1,3 +1,21 @@
+import { Invoice } from './classes/Invoice.js'
+import { Payment } from './classes/Payment.js'
+import { HasFormatter } from './interfaces/HasFormatter.js'
+
+
+let docOne: HasFormatter
+let docTwo: HasFormatter
+
+docOne = new Invoice('Mario', 'Run in game', 340) 
+docTwo = new Invoice('Two Inv', 'Inv by Two', 340) 
+
+let docs: HasFormatter[] = []
+docs.push(docOne)
+docs.push(docTwo)
+
+console.log(docs)
+
+// INTERFACES
 interface isPerson {
     name: string
     age: number
@@ -24,7 +42,7 @@ const greetMe = (person: isPerson) => {
 
 greetMe(me)
 
-import { Invoice } from './classes/Invoice.js'
+
 
 // Exclamation make sure that as a developer we know that tag is actually exist
 
@@ -62,12 +80,15 @@ const amount = document.querySelector('#amount') as HTMLInputElement
 
 form.addEventListener('submit', (e: Event) => {
     e.preventDefault()
-    console.log(
-        type.value,
-        tofrom.value,
-        details.value,
-        amount.valueAsNumber
-    )
+    let doc: HasFormatter
+    
+    if (type.value === 'invoice'){
+        doc = new Invoice(tofrom.value, details.value, amount.valueAsNumber)
+    } else {
+        doc = new Payment(tofrom.value, details.value, amount.valueAsNumber)
+    }
+
+    console.log(doc)
 })
 
 

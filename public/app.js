@@ -1,3 +1,13 @@
+import { Invoice } from './classes/Invoice.js';
+import { Payment } from './classes/Payment.js';
+let docOne;
+let docTwo;
+docOne = new Invoice('Mario', 'Run in game', 340);
+docTwo = new Invoice('Two Inv', 'Inv by Two', 340);
+let docs = [];
+docs.push(docOne);
+docs.push(docTwo);
+console.log(docs);
 const me = {
     name: 'Jieg',
     age: 30,
@@ -13,7 +23,6 @@ const greetMe = (person) => {
     console.log(`Hello ${person.name}`);
 };
 greetMe(me);
-import { Invoice } from './classes/Invoice.js';
 // Exclamation make sure that as a developer we know that tag is actually exist
 const anchor = document.querySelector('a');
 // if (anchor) {
@@ -40,5 +49,12 @@ const details = document.querySelector('#details');
 const amount = document.querySelector('#amount');
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    console.log(type.value, tofrom.value, details.value, amount.valueAsNumber);
+    let doc;
+    if (type.value === 'invoice') {
+        doc = new Invoice(tofrom.value, details.value, amount.valueAsNumber);
+    }
+    else {
+        doc = new Payment(tofrom.value, details.value, amount.valueAsNumber);
+    }
+    console.log(doc);
 });
