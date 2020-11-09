@@ -31,7 +31,7 @@ var mixed = [1, 'two', 3, 'four', 'five'];
 mixed.push(6);
 mixed.push('seven');
 mixed[0] = 'zero';
-// ===== OBJECTS =====
+// ===== objectS =====
 var country = {
     name: 'Indonesia',
     continent: 'Asia',
@@ -68,10 +68,10 @@ console.log(mixed_arr);
 var user_id;
 user_id = 123;
 user_id = '988';
-// ===== EXPLICIT OBJECTS =====
+// ===== EXPLICIT objectS =====
 var some_object;
 some_object = {
-    name: 'Named Object',
+    name: 'Named object',
     age: 23
 };
 // assign prop datatype
@@ -80,3 +80,23 @@ oth_object = {
     name: 'Oth',
     age: 12
 };
+// ===== DYNAMIC / ANY TYPE =====
+var umur;
+umur = true;
+console.log(umur);
+umur = 12;
+console.log(umur);
+umur = 'Twenty';
+console.log(umur);
+// arr any
+var any_arr = [];
+any_arr.push(1);
+any_arr.push('Two');
+any_arr.push(true);
+any_arr.push(false);
+console.log(any_arr);
+// obj any
+var obj_any;
+obj_any.name = 'My';
+obj_any.age = 12;
+console.log(obj_any);

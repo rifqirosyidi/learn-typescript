@@ -42,7 +42,7 @@ mixed.push(6)
 mixed.push('seven')
 mixed[0] = 'zero'
 
-// ===== OBJECTS =====
+// ===== objectS =====
 let country = {
     name: 'Indonesia',
     continent: 'Asia',
@@ -65,9 +65,9 @@ country.continent = 'America'
 console.log(country)
 
 // ===== EXPLICIT TYPES =====
-let person: String
-let age: Number
-let isLoggedIn: Boolean
+let person: string
+let age: number
+let isLoggedIn: boolean
 
 person = 'Tim',
 age = 12
@@ -76,36 +76,68 @@ isLoggedIn = false
 console.log(person, age, isLoggedIn)
 
 // ===== EXPLICIT ARR =====
-let persons: String[] = []
+let persons: string[] = []
 persons.push('One')
 
 console.log(persons)
 
 //  ===== UNION TYPES ======
-let mixed_arr: (String|Number)[] = []
+let mixed_arr: (string|number)[] = []
 mixed_arr.push('One')
 mixed_arr.push(2)
 
 console.log(mixed_arr)
 
-let user_id: String|Number
+let user_id: string|number
 user_id = 123
 user_id = '988'
 
-// ===== EXPLICIT OBJECTS =====
-let some_object: Object
+// ===== EXPLICIT objectS =====
+let some_object: object
 some_object = {
-    name: 'Named Object',
+    name: 'Named object',
     age: 23
 }
 
 // assign prop datatype
 let oth_object: {
-    name: String,
-    age: Number
+    name: string,
+    age: number
 }
 
 oth_object = {
     name: 'Oth',
     age: 12
 }
+
+
+// ===== DYNAMIC / ANY TYPE =====
+let umur: any
+
+umur = true
+console.log(umur)
+
+umur = 12
+console.log(umur)
+
+umur = 'Twenty'
+console.log(umur)
+
+// arr any
+let any_arr: any[] = []
+
+any_arr.push(1)
+any_arr.push('Two')
+any_arr.push(true)
+any_arr.push(false)
+
+console.log(any_arr)
+
+
+// obj any
+let obj_any: { name: any, age: any }
+
+obj_any.name = 'My'
+obj_any.age = 12
+
+console.log(obj_any)
