@@ -10,9 +10,10 @@ console.log(anchor.href)
 
 
 class Invoice {
-    client: string
-    details: string
-    amount: number
+    // ACCESS MODIFIER
+    readonly client: string
+    private details: string
+    public amount: number
 
     constructor(c: string, d: string, a:number) {
         this.client = c
@@ -36,6 +37,10 @@ listInvoice.push(invOne)
 listInvoice.push(invTwo)
 
 console.log(listInvoice)
+
+listInvoice.forEach(inv => {
+    console.log(inv.client, inv.amount, inv.format())
+})
 
 // FORM
 const form = document.querySelector('form') as HTMLFormElement

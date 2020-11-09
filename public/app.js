@@ -23,6 +23,9 @@ var listInvoice = [];
 listInvoice.push(invOne);
 listInvoice.push(invTwo);
 console.log(listInvoice);
+listInvoice.forEach(function (inv) {
+    console.log(inv.client, inv.amount, inv.format());
+});
 // FORM
 var form = document.querySelector('form');
 // console.log(form.children)
