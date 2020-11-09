@@ -1,3 +1,5 @@
+import { Invoice } from './classes/Invoice.js'
+
 // Exclamation make sure that as a developer we know that tag is actually exist
 
 const anchor = document.querySelector('a')!
@@ -8,28 +10,8 @@ const anchor = document.querySelector('a')!
 
 console.log(anchor.href)
 
-
-class Invoice {
-    // ACCESS MODIFIER
-    readonly client: string
-    private details: string
-    public amount: number
-
-    constructor(c: string, d: string, a:number) {
-        this.client = c
-        this.details = d
-        this.amount = a
-    } 
-
-
-    format() {
-        return `${this.client} owes $${this.amount} for ${this.details}`
-    }
-}
-
 const invOne = new Invoice('Rifqi', 'Work', 200)
 const invTwo = new Invoice('Some', 'Dev', 300)
-
 
 // Cool
 let listInvoice: Invoice[] = []

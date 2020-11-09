@@ -1,39 +1,39 @@
 "use strict";
 // ===== INTRODUCTION =====
-var characters = 'Universe';
+const characters = 'Universe';
 console.log(characters);
-var inputs = document.querySelectorAll('input');
+const inputs = document.querySelectorAll('input');
 console.log(inputs);
-inputs.forEach(function (i) { return console.log(i); });
+inputs.forEach(i => console.log(i));
 // ===== DATA TYPES =====
-var mario_char = 'Mario';
-var mario_age = 30;
-var mario_isFemale = false;
+let mario_char = 'Mario';
+let mario_age = 30;
+let mario_isFemale = false;
 // reassign wont work caused by different assintment of datatype
 // mario_age = "Twenty" 
 mario_char = "Luigi";
 mario_age = 20;
 mario_isFemale = true;
-var findCircleDiameter = function (d) {
+const findCircleDiameter = (d) => {
     return d * Math.PI;
 };
 console.log(findCircleDiameter(2));
 // ===== ARRAY ======
-var words = ['it', 'do', 'be', 'like', 'this'];
+let words = ['it', 'do', 'be', 'like', 'this'];
 words.push('last');
 // cannot push different datatype
 // words.push(3) 
-var numbers = [1, 2, 3, 4];
+let numbers = [1, 2, 3, 4];
 numbers.push(5);
 // cannot push different datatype
 // numbers.push('six')
 // mixed array
-var mixed = [1, 'two', 3, 'four', 'five'];
+let mixed = [1, 'two', 3, 'four', 'five'];
 mixed.push(6);
 mixed.push('seven');
 mixed[0] = 'zero';
 // ===== objectS =====
-var country = {
+let country = {
     name: 'Indonesia',
     continent: 'Asia',
     independence: 'August 17, 1945',
@@ -50,39 +50,39 @@ country.continent = 'America';
 // }
 console.log(country);
 // ===== EXPLICIT TYPES =====
-var person;
-var age;
-var isLoggedIn;
+let person;
+let age;
+let isLoggedIn;
 person = 'Tim',
     age = 12;
 isLoggedIn = false;
 console.log(person, age, isLoggedIn);
 // ===== EXPLICIT ARR =====
-var persons = [];
+let persons = [];
 persons.push('One');
 console.log(persons);
 //  ===== UNION TYPES ======
-var mixed_arr = [];
+let mixed_arr = [];
 mixed_arr.push('One');
 mixed_arr.push(2);
 console.log(mixed_arr);
-var user_id;
+let user_id;
 user_id = 123;
 user_id = '988';
 // ===== EXPLICIT objectS =====
-var some_object;
+let some_object;
 some_object = {
     name: 'Named object',
     age: 23
 };
 // assign prop datatype
-var oth_object;
+let oth_object;
 oth_object = {
     name: 'Oth',
     age: 12
 };
 // ===== DYNAMIC / ANY TYPE =====
-var umur;
+let umur;
 umur = true;
 console.log(umur);
 umur = 12;
@@ -90,68 +90,67 @@ console.log(umur);
 umur = 'Twenty';
 console.log(umur);
 // arr any
-var any_arr = [];
+let any_arr = [];
 any_arr.push(1);
 any_arr.push('Two');
 any_arr.push(true);
 any_arr.push(false);
 console.log(any_arr);
 // obj any
-var obj_any;
+let obj_any;
 obj_any = { name: 'My', age: 12 };
 console.log(obj_any);
 // ===== FUNCTION =====
-var sayHi = function () {
+let sayHi = () => {
     console.log("Hi There");
 };
 sayHi();
 // define initial var as a function
-var sayHello;
-sayHello = function () {
+let sayHello;
+sayHello = () => {
     console.log("Works");
 };
-var addition = function (a, b) {
+const addition = (a, b) => {
     console.log(a + b);
 };
 addition(13, 89);
 // optional parameters
-var minus = function (a, b, c) {
-    if (c === void 0) { c = 'DEFAULT VALUE'; }
+const minus = (a, b, c = 'DEFAULT VALUE') => {
     console.log(a - b);
     console.log(c);
 };
 minus(4, 5);
 minus(4, 3, 'Min Opr');
 // sayHi = 'New Say Hi'
-var multiply = function (a, b) {
+const multiply = (a, b) => {
     return a * b;
 };
 // assign the type of return value
-var result = multiply(10, 23);
+let result = multiply(10, 23);
 console.log(result);
 // More Specific
 // (a: ..., b: ...) : ...
-var multiplyWithDefineReturnVal = function (a, b) {
+const multiplyWithDefineReturnVal = (a, b) => {
     return a * b;
 };
-var number_result = multiplyWithDefineReturnVal(3, 7);
+let number_result = multiplyWithDefineReturnVal(3, 7);
 console.log(number_result);
-var showLogs = function (uid, item) {
-    console.log(item + " id's " + uid);
+const showLogs = (uid, item) => {
+    console.log(`${item} id's ${uid}`);
 };
-var saySomething = function (user) {
-    console.log(user.name + " id's " + user.uid);
+const saySomething = (user) => {
+    console.log(`${user.name} id's ${user.uid}`);
 };
 // ====== FUNCTION SIGNATURES =====
-var sentence;
+let sentence;
 // exp 1
-var greet;
-greet = function (name, greeting) {
-    console.log("Good " + greeting + " " + name);
+let greet;
+greet = (name, greeting) => {
+    console.log(`Good ${greeting} ${name}`);
 };
 // exp 2
-var calc;
-calc = function (numOne, numTwo, action) {
+let calc;
+calc = (numOne, numTwo, action) => {
     if (action === 'add') {
         return numOne + numTwo;
     }
@@ -160,7 +159,7 @@ calc = function (numOne, numTwo, action) {
     }
 };
 // exp 3
-var logDetails;
-logDetails = function (person) {
-    console.log(person.name + " is " + person.age);
+let logDetails;
+logDetails = (person) => {
+    console.log(`${person.name} is ${person.age}`);
 };
