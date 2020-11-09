@@ -139,6 +139,28 @@ console.log(number_result);
 var showLogs = function (uid, item) {
     console.log(item + " id's " + uid);
 };
-var sayHi = function (user) {
+var saySomething = function (user) {
     console.log(user.name + " id's " + user.uid);
+};
+// ====== FUNCTION SIGNATURES =====
+var sentence;
+// exp 1
+var greet;
+greet = function (name, greeting) {
+    console.log("Good " + greeting + " " + name);
+};
+// exp 2
+var calc;
+calc = function (numOne, numTwo, action) {
+    if (action === 'add') {
+        return numOne + numTwo;
+    }
+    else {
+        return numOne - numTwo;
+    }
+};
+// exp 3
+var logDetails;
+logDetails = function (person) {
+    console.log(person.name + " is " + person.age);
 };
