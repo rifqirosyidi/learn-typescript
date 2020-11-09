@@ -136,8 +136,5 @@ console.log(any_arr)
 
 // obj any
 let obj_any: { name: any, age: any }
-
-obj_any.name = 'My'
-obj_any.age = 12
-
+obj_any =  { name: 'My', age: 12 }
 console.log(obj_any)

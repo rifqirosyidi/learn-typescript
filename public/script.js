@@ -1,3 +1,4 @@
+"use strict";
 // ===== INTRODUCTION =====
 var characters = 'Universe';
 console.log(characters);
@@ -35,7 +36,7 @@ mixed[0] = 'zero';
 var country = {
     name: 'Indonesia',
     continent: 'Asia',
-    independence: 'August 17, 1945'
+    independence: 'August 17, 1945',
 };
 // country.independence = 17
 country.continent = 'America';
@@ -97,6 +98,5 @@ any_arr.push(false);
 console.log(any_arr);
 // obj any
 var obj_any;
-obj_any.name = 'My';
-obj_any.age = 12;
+obj_any = { name: 'My', age: 12 };
 console.log(obj_any);
