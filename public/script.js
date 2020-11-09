@@ -136,3 +136,9 @@ var multiplyWithDefineReturnVal = function (a, b) {
 };
 var number_result = multiplyWithDefineReturnVal(3, 7);
 console.log(number_result);
+var showLogs = function (uid, item) {
+    console.log(item + " id's " + uid);
+};
+var sayHi = function (user) {
+    console.log(user.name + " id's " + user.uid);
+};

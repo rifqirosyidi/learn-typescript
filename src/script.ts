@@ -185,3 +185,16 @@ const multiplyWithDefineReturnVal = (a: number, b:number): number => {
 
 let number_result = multiplyWithDefineReturnVal(3, 7)
 console.log(number_result)
+
+
+// ===== TYPE ALIASSES =====
+type StringOrNumber = string | number;
+type objWithIdAndName = { name: string, uid: StringOrNumber}
+
+const showLogs = (uid: StringOrNumber, item: String) => {
+    console.log(`${item} id's ${uid}`)
+}
+
+const sayHi = (user: objWithIdAndName) => {
+    console.log(`${user.name} id's ${user.uid}`)
+}
