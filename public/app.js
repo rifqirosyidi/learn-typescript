@@ -87,3 +87,28 @@ const dataFour = {
     res: 'cart',
     data: ['laptop', 'smartphone']
 };
+// ENUMS
+var SecondResourceType;
+(function (SecondResourceType) {
+    SecondResourceType[SecondResourceType["BOOK"] = 0] = "BOOK";
+    SecondResourceType[SecondResourceType["MOVIE"] = 1] = "MOVIE";
+    SecondResourceType[SecondResourceType["TV"] = 2] = "TV";
+    SecondResourceType[SecondResourceType["AUTHOR"] = 3] = "AUTHOR";
+    SecondResourceType[SecondResourceType["DIRECTOR"] = 4] = "DIRECTOR";
+    SecondResourceType[SecondResourceType["ACTOR"] = 5] = "ACTOR";
+})(SecondResourceType || (SecondResourceType = {}));
+const dataSix = {
+    uid: 2,
+    res: SecondResourceType.AUTHOR,
+    data: { name: 'Smith' }
+};
+const dataSeven = {
+    uid: 2,
+    res: SecondResourceType.AUTHOR,
+    data: { name: 'Smith' }
+};
+const dataEight = {
+    uid: 2,
+    res: SecondResourceType.MOVIE,
+    data: { name: 'The LOTR' }
+};

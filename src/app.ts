@@ -138,3 +138,32 @@ const dataFour: Resource<string[]> = {
     res: 'cart',
     data: ['laptop', 'smartphone']
 }
+
+
+// ENUMS
+
+enum SecondResourceType { BOOK, MOVIE, TV, AUTHOR, DIRECTOR, ACTOR }
+
+interface SecondResource<T> {
+    uid: number
+    res: SecondResourceType
+    data: T
+}
+
+const dataSix: SecondResource<object> = {
+    uid: 2,
+    res: SecondResourceType.AUTHOR,
+    data: {name: 'Smith'}
+}
+
+const dataSeven: SecondResource<object> = {
+    uid: 2,
+    res: SecondResourceType.AUTHOR,
+    data: {name: 'Smith'}
+}
+
+const dataEight: SecondResource<object> = {
+    uid: 2,
+    res: SecondResourceType.MOVIE,
+    data: {name: 'The LOTR'}
+}
